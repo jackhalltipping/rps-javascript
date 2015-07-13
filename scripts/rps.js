@@ -4,45 +4,44 @@ var Player = function() {
 };
 
 Player.prototype.choose = function(choice) {
-  if (_.contains(this.choices, choice)) {
-    this.choice = choice;
-  } else {
+  if (!(_.contains(this.choices, choice))) {
     throw new Error("choice error");
   }
+  this.choice = choice;
 };
 
-var Opponent = function() {
+var Computer = function() {
   this.choices = ['rock', 'paper', 'scissors'];
   this.choice = '';
 };
 
-Opponent.prototype.choose = function() {
+Computer.prototype.choose = function() {
   this.choice = _.sample(this.choices);
 };
 
 var Game = function() {
 };
 
-Game.prototype.play = function (player, opponent) {
-  if (player === opponent) {
+Game.prototype.play = function (player, computer) {
+  if (player === computer) {
     return "tie";
   }
-  if (player === "rock" && opponent ==="paper") {
+  if (player === "rock" && computer ==="paper") {
     return "lose";
   }
-  if (player === "rock" && opponent ==="scissors") {
+  if (player === "rock" && computer ==="scissors") {
     return "win";
   }
-  if (player === "paper" && opponent ==="scissors") {
+  if (player === "paper" && computer ==="scissors") {
     return "lose";
   }
-  if (player === "paper" && opponent ==="rock") {
+  if (player === "paper" && computer ==="rock") {
     return "win";
   }
-  if (player === "scissors" && opponent ==="paper") {
+  if (player === "scissors" && computer ==="paper") {
     return "win";
   }
-  if (player === "scissors" && opponent ==="rock") {
+  if (player === "scissors" && computer ==="rock") {
     return "lose";
   } else {
     return "error";

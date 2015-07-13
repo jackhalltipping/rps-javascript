@@ -15,17 +15,17 @@ describe('Player', function() {
   });
 });
 
-describe('Opponent', function() {
-  var opponent;
+describe('computer', function() {
+  var computer;
 
   beforeEach(function() {
-    opponent = new Opponent();
+    computer = new Computer();
   });
 
   it('choice is randomly selected from rock, paper, scissors', function(){
     var choices = ['rock', 'paper', 'scissors'];
-    opponent.choose();
-    expect(_.contains(choices, opponent.choice)).toEqual(true);
+    computer.choose();
+    expect(_.contains(choices, computer.choice)).toEqual(true);
   });
 });
 
@@ -41,24 +41,24 @@ describe('Game', function() {
   });
 
   beforeEach(function() {
-    opponent = new Opponent();
+    computer = new Computer();
   });
 
   it('says if the player wins', function() {
-    opponent.choice = "rock";
+    computer.choice = "rock";
     player.choose("paper");
-    expect(game.play(player.choice, opponent.choice)).toBe("win");
+    expect(game.play(player.choice, computer.choice)).toBe("win");
   });
 
   it('says if the player loses', function() {
-    opponent.choice = "scissors";
+    computer.choice = "scissors";
     player.choose("paper");
-    expect(game.play(player.choice, opponent.choice)).toBe("lose");
+    expect(game.play(player.choice, computer.choice)).toBe("lose");
   });
 
   it('says if the player ties', function() {
-    opponent.choice = "paper";
+    computer.choice = "paper";
     player.choose("paper");
-    expect(game.play(player.choice, opponent.choice)).toBe("tie");
+    expect(game.play(player.choice, computer.choice)).toBe("tie");
   });
 });
