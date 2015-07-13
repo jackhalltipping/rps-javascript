@@ -14,3 +14,16 @@ describe('Player', function() {
     expect( function(){ player.choose("banana"); } ).toThrow(new Error("choice error"));
   });
 });
+
+describe('Opponent', function() {
+  var opponent;
+
+  beforeEach(function() {
+    opponent = new Opponent();
+  });
+
+  it('choice is randomly selected from rock, paper, scissors', function(){
+    var choices = ['rock', 'paper', 'scissors'];
+    expect(_.contains(choices, opponent.choice())).toEqual(true);
+  });
+});

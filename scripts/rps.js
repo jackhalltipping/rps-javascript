@@ -10,3 +10,11 @@ Player.prototype.choose = function(choice) {
     throw new Error("choice error");
   }
 };
+
+var Opponent = function() {
+  this.choices = ['rock', 'paper', 'scissors'];
+};
+
+Opponent.prototype.choice = function() {
+  return _.sample(this.choices)
+}
