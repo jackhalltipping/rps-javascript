@@ -24,25 +24,25 @@ var Game = function() {
 
 Game.prototype.play = function (player, computer) {
   if (player === computer) {
-    return "tie";
+    return "you tie";
   }
   if (player === "rock" && computer ==="paper") {
-    return "lose";
+    return "you lose";
   }
   if (player === "rock" && computer ==="scissors") {
-    return "win";
+    return "you win";
   }
   if (player === "paper" && computer ==="scissors") {
-    return "lose";
+    return "you lose";
   }
   if (player === "paper" && computer ==="rock") {
-    return "win";
+    return "you win";
   }
   if (player === "scissors" && computer ==="paper") {
-    return "win";
+    return "you win";
   }
   if (player === "scissors" && computer ==="rock") {
-    return "lose";
+    return "you lose";
   } else {
     return "error";
   }

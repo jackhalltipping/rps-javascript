@@ -47,18 +47,18 @@ describe('Game', function() {
   it('says if the player wins', function() {
     computer.choice = "rock";
     player.choose("paper");
-    expect(game.play(player.choice, computer.choice)).toBe("win");
+    expect(game.play(player.choice, computer.choice)).toBe("you win");
   });
 
   it('says if the player loses', function() {
     computer.choice = "scissors";
     player.choose("paper");
-    expect(game.play(player.choice, computer.choice)).toBe("lose");
+    expect(game.play(player.choice, computer.choice)).toBe("you lose");
   });
 
   it('says if the player ties', function() {
     computer.choice = "paper";
     player.choose("paper");
-    expect(game.play(player.choice, computer.choice)).toBe("tie");
+    expect(game.play(player.choice, computer.choice)).toBe("you tie");
   });
 });

@@ -1,14 +1,7 @@
-describe('Interface', function() {
-
-  beforeEach(function() {
-    jasmine.getFixtures().fixturesPath = ".";
-    loadFixtures('rps.html');
-  });
-
-  it('has clickable buttons that output the game result', function() {
-    $('#rock').click();
-    expect('#result').toContainText('you')
-  });
-
-
-});
+// describe('Interface', function() {
+//
+//   it('has a rock button', function() {
+//     expect(document.getElementById('rock')).toBe(<button id="rock" type="button">Rock</button>));
+//   });
+//
+// });
