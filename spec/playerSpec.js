@@ -11,7 +11,6 @@ describe('Player', function() {
   });
 
   it('only allows user to choose rock, paper or scissors', function(){
-    player.choose('banana');
-    expect(player.choice).toThrow('please choose rock, paper or scissors');
+    expect( function(){ player.choose("banana"); } ).toThrow(new Error("choice error"));
   });
 });
