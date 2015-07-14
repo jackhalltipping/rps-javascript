@@ -115,6 +115,13 @@ describe ('Game', function(){
       expect(rps.playerWinsCount).toEqual(1)
     });
 
+    it('increments computers win count', function(){
+      rps.playerSelection('Rock');
+      spyOn(Math, 'random').and.returnValue(0.5); //gives paper
+      rps.outcome();
+      expect(rps.computerWinsCount).toEqual(1)
+    });
+
   });
 
 
