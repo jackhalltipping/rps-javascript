@@ -1,7 +1,11 @@
-# Rock Paper Scissors in JavaScript
+## Synopis
+the marketeer will be presented the choices (rock, paper and scissors)
+the marketeer can choose one option
+the game will choose a random option
+a winner will be declared
 
-# Version 1: Converting from Ruby to JavaScript
-
-Use existing Ruby code and implement RPS logic in JavaScript, testing in Jasmine.
-
+## Basic rules
+Rock beats Scissors
+Scissors beats Paper
+Paper beats Rock
 
