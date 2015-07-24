@@ -1,3 +1,6 @@
+Sample game:
+![sample](/public/images/sample.png)
+
 ## Synopis
 the marketeer will be presented the choices (rock, paper and scissors)
 the marketeer can choose one option
@@ -8,4 +11,3 @@ a winner will be declared
 Rock beats Scissors
 Scissors beats Paper
 Paper beats Rock
-
